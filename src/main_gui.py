@@ -47,6 +47,7 @@ class MainGUI:
         ttk.Label(self.output_frame, text='Output File').grid(row=0, column=0, columnspan=3, padx=5, pady=5)
         self.output_type_combobox = ttk.Combobox(self.output_frame, state='readonly')
         self.output_type_combobox['values'] = ('MP4 file', 'MKV file')
+        self.output_type_combobox.grid(row=1, column=0)
         self.output_path_field = ttk.Entry(self.output_frame)
         self.output_path_field.grid(row=1, column=1)
         self.output_browse_button = ttk.Button(self.output_frame, command=lambda: self.backend.handle_main__browse_button(self.output_path_field, self.output_type_combobox.get()), text='Browse')
